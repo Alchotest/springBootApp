@@ -11,14 +11,17 @@
     <title>Registration</title>
 </head>
 <body>
+
 <div class="container">
-    <h1>Yoy have been successfully registered</h1>
+    <h1>You have been successfully registered</h1>
     <form th:action="@{/logout}" method="post">
-        <input type="submit"
-               name="logout-submit"
-               id="logout-submit"
-               class="form-control btn btn-info"
-               value="log out"/>
+        <div class="col-sm-6 col-sm-offset-3">
+            <input type="submit"
+                   name="logout-submit"
+                   id="logout-submit"
+                   class="form-control btn btn-info"
+                   value="log out"/>
+        </div>
     </form>
 </div>
 
