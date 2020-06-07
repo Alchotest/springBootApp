@@ -26,10 +26,13 @@
     </form>
 
 </div>
-<div sec:authorize="hasRole('ROLE_ADMIN')">
-    <a href="userList.html">users</a>
-</div>
-<a href="uploadForm.html">images</a>
+<!--<form th:action="@{/}" method="get">-->
+    <div sec:authorize="hasRole('ROLE_ADMIN')">
+         <a href="/" th:href="@{/list}">user list</a>
+    </div>
+<!--</form>-->
+
+<a th:href="@{/uploadForm.html}" href="uploadForm.html">upload images</a>
 
 
 <script type="text/javascript" th:src="@{/webjars/jquery/3.2.1/jquery.min.js/}"></script>

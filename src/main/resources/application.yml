@@ -7,10 +7,10 @@ spring:
     username: root
     password: qwerty12
     driverClassName: com.mysql.cj.jdbc.Driver
-  servlet:
-    multipart:
-      max-file-size: 128KB
-      max-request-size: 128KB
+#  servlet:
+#    multipart:
+#      max-file-size: 128KB
+#      max-request-size: 128KB
 
   # ===============================
   # = JPA configurations
