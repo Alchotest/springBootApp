@@ -26,11 +26,9 @@
     </form>
 
 </div>
-<!--<form th:action="@{/}" method="get">-->
-    <div sec:authorize="hasRole('ROLE_ADMIN')">
-         <a href="/" th:href="@{/list}">user list</a>
-    </div>
-<!--</form>-->
+<div sec:authorize="hasRole('ROLE_ADMIN')">
+    <a href="/" th:href="@{/list}">user list</a>
+</div>
 
 <a th:href="@{/uploadForm.html}" href="uploadForm.html">upload images</a>
 
