@@ -1,13 +1,14 @@
 package com.example.demo.model;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import javax.persistence.Id;
 import java.util.Collection;
 
 @Entity
 @Data
+@NoArgsConstructor
 public class Role {
 
     @Id
@@ -19,9 +20,6 @@ public class Role {
 
     public Role(String name) {
         this.name = name;
-    }
-
-    public Role() {
     }
 
     @Override

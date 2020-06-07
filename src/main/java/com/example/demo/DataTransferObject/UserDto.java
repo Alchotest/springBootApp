@@ -15,6 +15,8 @@ import javax.validation.constraints.AssertTrue;
 @Data
 public class UserDto {
 
+    private boolean enable;
+
     @NotEmpty
     private String userName;
 

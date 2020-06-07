@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml" lang="en">
+
 <head>
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
 
     <link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/3.3.7/css/bootstrap.min.css}"/>
     <link rel="stylesheet" type="text/css" th:href="@{/css/main.css}"/>
@@ -13,7 +14,7 @@
 <body>
 
 <div class="container">
-    <h1>You have been successfully registered</h1>
+    <h1>You have been successfully logined</h1>
     <form th:action="@{/logout}" method="post">
         <div class="col-sm-6 col-sm-offset-3">
             <input type="submit"
@@ -23,7 +24,12 @@
                    value="log out"/>
         </div>
     </form>
+
 </div>
+<div sec:authorize="hasRole('ROLE_ADMIN')">
+    <a href="userList.html">users</a>
+</div>
+<a href="uploadForm.html">images</a>
 
 
 <script type="text/javascript" th:src="@{/webjars/jquery/3.2.1/jquery.min.js/}"></script>

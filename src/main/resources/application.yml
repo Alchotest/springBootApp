@@ -7,6 +7,10 @@ spring:
     username: root
     password: qwerty12
     driverClassName: com.mysql.cj.jdbc.Driver
+  servlet:
+    multipart:
+      max-file-size: 128KB
+      max-request-size: 128KB
 
   # ===============================
   # = JPA configurations
@@ -14,7 +18,7 @@ spring:
   jpa:
     show-sql: false
     hibernate:
-      ddl-auto: create
+      ddl-auto: update
     database-platform: MYSQL
     properties:
       hibernate.dialect: org.hibernate.dialect.MySQL5Dialect
