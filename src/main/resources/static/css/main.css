@@ -1,6 +1,17 @@
 h1 {
     color: #78ab46;
-    text-align: center;
+}
+
+footer {
+    position: fixed;
+    height: 50px;
+    bottom: 0;
+    width: 100%;
+    background-color: #ccc
+}
+
+footer p {
+    padding: 15px;
 }
 
 .error-message {
@@ -9,4 +20,10 @@ h1 {
 
 .error-message:first-letter {
     text-transform: capitalize;
+}
+
+.font{
+    color: cadetblue;
+    font-style: italic;
+    font-family: Arial;
 }

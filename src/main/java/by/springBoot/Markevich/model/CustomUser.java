@@ -33,7 +33,7 @@ public class CustomUser implements UserDetails {
     }
 
     public String getUsername() {
-        return user.getUserName();
+        return user.getUsername();
     }
 
     public boolean isAccountNonExpired() {
@@ -49,7 +49,7 @@ public class CustomUser implements UserDetails {
     }
 
     public boolean isEnabled() {
-        return user.isEnable();
+        return true;
     }
 
 }

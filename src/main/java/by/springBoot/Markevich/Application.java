@@ -1,5 +1,6 @@
 package by.springBoot.Markevich;
 
+import by.springBoot.Markevich.controller.ProfileController;
 import by.springBoot.Markevich.service.StorageProperties;
 import by.springBoot.Markevich.service.StorageService;
 import org.springframework.boot.CommandLineRunner;

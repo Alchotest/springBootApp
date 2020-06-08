@@ -5,16 +5,39 @@
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 
-
     <link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/3.3.7/css/bootstrap.min.css}"/>
     <link rel="stylesheet" type="text/css" th:href="@{/css/main.css}"/>
 
     <title>Registration</title>
 </head>
 <body>
-
 <div class="container">
-    <h1>You have been successfully logined</h1>
+<h1>You have been successfully logined</h1>
+</div>
+<br/>
+<div class="container" sec:authorize="hasRole('ROLE_USER')">
+    <div class="col-sm-6 col-sm-offset-3">
+        <button name="logout-submit" id="profile" class="form-control btn btn-info">
+            <a href="/profile">profile</a>
+        </button>
+    </div>
+</div>
+<br/>
+<div class="container" sec:authorize="hasRole('ROLE_ADMIN')">
+    <div class="col-sm-6 col-sm-offset-3">
+        <button name="logout-submit" id="user-list" class="form-control btn btn-info">
+            <a href="/" th:href="@{/list}">user list</a>
+        </button>
+    </div>
+</div>
+<br/>
+<div class="container">
+    <div class="col-sm-6 col-sm-offset-3">
+        <input type="button" name="logout-submit" id="load-image" class="form-control btn btn-info" onclick="location.href='uploadForm.html';" value="Upload image"/>
+    </div>
+</div>
+<br/>
+<div class="container">
     <form th:action="@{/logout}" method="post">
         <div class="col-sm-6 col-sm-offset-3">
             <input type="submit"
@@ -24,13 +47,8 @@
                    value="log out"/>
         </div>
     </form>
-
-</div>
-<div sec:authorize="hasRole('ROLE_ADMIN')">
-    <a href="/" th:href="@{/list}">user list</a>
 </div>
 
-<a th:href="@{/uploadForm.html}" href="uploadForm.html">upload images</a>
 
 
 <script type="text/javascript" th:src="@{/webjars/jquery/3.2.1/jquery.min.js/}"></script>

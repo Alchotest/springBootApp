@@ -25,4 +25,5 @@ public class UserListPageController {
         model.addAttribute("userList", allUsers);
         return "userList";
     }
+
 }
